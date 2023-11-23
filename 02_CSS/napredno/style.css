@@ -1,0 +1,31 @@
+/* Kada vise elemenata inmaju isto svojstvo */
+h3, h4 {
+    color: orange;
+}
+
+/*Pristupanje klasi*/
+.desno_poravnanje {
+    text-align: right;
+}
+
+.crveni_tekst {
+    color: red;
+}
+.drugi {
+    background-color: yellow;
+}
+#treci {
+    background-color: bisque;
+}
+
+/*prioritet selektrora: element<klase<id*<inline <!important*/
+
+li {
+    color: limegreen;
+}
+.stavka {
+    color: blue;
+}
+#prva_stavka {
+    color: orange;
+}
