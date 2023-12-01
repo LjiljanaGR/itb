@@ -1,0 +1,31 @@
+div {
+    background-color: blanchedalmond;
+    border: 2px solid red;
+    width: 200px;
+    height: 130px;
+}
+
+#d2 {
+    position: fixed;
+    bottom: 20px;
+    left: 100px;
+}
+
+#d1 {
+    position: relative;
+    top: -100px;
+    left: 20px;
+    z-index: 2;
+}
+
+div {
+    position: relative;
+}
+
+div h3 {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    margin: 0;
+
+}

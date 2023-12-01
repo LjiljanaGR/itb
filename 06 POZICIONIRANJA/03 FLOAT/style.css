@@ -1,0 +1,30 @@
+
+/*
+    1. HTML: parent-child struktura
+    2. children: float svojstvo
+    3. parent: overlow
+*/
+
+div {
+    background-color: brown;
+    overflow: hidden;
+}
+
+.clearfic::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+p {
+    background-color: rgb(0, 183, 255);
+    border: 2px solid red;
+    width: 250px;
+    height: 50px;
+    float: right;
+}
+
+p:nth-child(2n) {
+    float: left;
+} 
+

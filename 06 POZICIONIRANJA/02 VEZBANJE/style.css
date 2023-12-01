@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    background-image: url(pizza.jpg);
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+}
+/*
+
+Gornji levi ugaoo hedera.
+
+div {
+    font-size: 50px;
+}
+*/
+
+
+/*Gornji desni ugao hedera.
+div {
+    font-size: 50px;
+    position: fixed;
+    right: 0px;
+}
+*/
+
+
+/* U donjem levom uglu *
+div {
+    font-size: 50px;
+    position: absolute;
+    top: 500px;
+    left: 0;
+}
+*/
+
+/*U donjem desnom uglu 
+
+div {
+    font-size: 50px;
+    position: absolute;
+    top: 500px;
+    right: 0;
+}
+*/
+ 
+/* Centirano */
+div {
+    font-size: 50px;
+    position: fixed;
+    top: 250px;
+    left: 600px;
+    
+  
+    
+}
+

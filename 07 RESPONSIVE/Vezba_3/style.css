@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.row {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid red;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+   width: 16.66%;
+}    
+.col-3 {
+   width: 25%;
+}    
+.col-4 {
+   width: 33.33%
+}    
+.col-5 {
+   width: 41.66%
+}       
+.col-6 {
+   width: 50%;
+}
+.col-7 {
+   width: 58.33%
+}
+.col-8 {
+   width: 66.66%
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+   width: 83.33%
+}
+.col-11 {
+   width: 91.66%;
+}
+.col-12 {
+   width: 100%;
+}
+
+h1 {
+    color: #0275D8;
+    text-align: center;
+}
+
+.nav_bar {
+    background-color: #0275D8;
+    position: relative;
+    height: 50px;    
+}
+
+.logo {
+    position: absolute;
+    top: 5px;
+}
+
+nav {
+   position: absolute;
+   left: 300px;
+   top: 15px;  
+}
+
+nav ul li {
+    display: inline;     
+    margin-right: 20px;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section_2 {
+    padding: 30px 0 0 30px;
+}
+
+.section_2 h2 {
+    padding: 0 0 15px 25px;
+}
+
+.section_2 {
+    height: 300px;
+}
+
+.section_3 {
+    height: 300px; 
+}
+
+.prazan {
+    visibility: hidden;
+}
+
+.section_3 h3 {
+    background-color: rgb(196, 206, 219);
+    padding: 10px 5px;
+    margin: 2px;
+}
+
+.section_3 p {
+    padding: 10px 5px;
+    display: none;
+}
+
+.destinacije div:nth-child(n):hover p {
+    display: block;
+}
