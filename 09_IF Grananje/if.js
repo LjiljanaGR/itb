@@ -11,6 +11,7 @@ if (x ==y){
 
 console.log("komanda ispod IF grane");
 
+
 let a = 4;
 let b = "4";
 if (a == b) {
@@ -24,3 +25,15 @@ if (a === b) {
 if(a !== b) {
     console.log('Promenjive x i y su razlicite bilo po tipu ili po vrednostima');
 }
+
+
+
+
+
+
+
+
+
+
+
+
