@@ -188,16 +188,19 @@ console.log(`Suma kvadrata brojeva od ${n} do ${m} iznosi ${sumaKvadrata}`);
 //22. Svakom parnom redu dodati klasu „obojen“.
 //23. Korišćenjem CSS-a, klasi obojen postaviti proizvoljnu boju pozadine. 
 
+
+
+//////////////////////////////////////////////////////////
+//////// DODATNI ZADACI
+///////////////////////////////////////////////////////////
+
+
 //4.1.1 Напиши програм који 30 пута исписује Ja vežbam Python.
 
-i = 1;
-n = 30;
-let ispis = "Ja vezbam Python."
 
-for (i = 1; i <=30; i++) {
-
+for (let i = 0; i <= 30; i++) {
+    console.log("ja");
 }
-
 
 
 //24. Napisati program koji unetom broju N:
@@ -219,4 +222,25 @@ console.log(sum);
 // b) Određuje aritmetičku sredinu cifara
 //====================================================================
 
+//i = 0; 
+n = 6;
+arSredina = 0;
+let sumaBrojeva = 0;
+let brojac = 0;
+
+for (i = 0; i <= n; i++) {
+    sumaBrojeva += i;
+    brojac++;
+    arSredina = sumaBrojeva / brojac;
+}
+
+console.log(arSredina);
+
 // c) Ispisuje cifre u obrnutom redosledu
+//=================================================================
+
+n = 1;
+
+for (i = 20; i >= n; i--) {
+    console.log(i);
+}
