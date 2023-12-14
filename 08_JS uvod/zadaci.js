@@ -1,4 +1,5 @@
 // Zadatak 1.
+//______________________________________________
 let sati = 1;
 let minuti = 58;
 
@@ -8,18 +9,19 @@ console.log("Minuta od ponoci:" + odPonoci);
 //console.log("Minuta od ponoci: " + (sati * + minuti));
 
 //Zadatak 1.1 - Minuti ostalo od ponoci
-
+//___________________________________________________
 let doPonoci = 24 * 60 - odPonoci;
 console.log("Minuta do ponoci: " + doPonoci);
 
 //Zadatak 2: 
+//____________________________________________________
 odPonoci = 30; 
 let sat1 = Math.floor(odPonoci / 60);
 let min1 = odPonoci % 60;
 console.log(sat1, min1);
 
-
 //Zadatak 3:
+//______________________________________________
 let cena = 500;
 let novcanica = 1000;
 
@@ -27,6 +29,7 @@ let kusur = novcanica - cena;
 console.log("Vas kusur: " + kusur);
 
 //Zadatak 6:
+//____________________________________________
 let ukupnoEur = 70;
 let kursEura = 117.29;
 
@@ -39,20 +42,26 @@ let novacEura = novacDinara/kursEura;
 console.log(novacEura);
 
 //Zadatak 7:
-/ Zadatak 7
+//_________________________________________________
 // Prva konverzija = eur => dol uz pomoc din
 let brojEur = 100;
 let kursDol = 106.79;
+
 // let brojDin = brojEur * kursEur;
 // let brojDol = brojDin / kursDol;
+
 let brojDol = brojEur * kursEur / kursDol;
 console.log(brojDol);
+
 // Druga konverzija - iz dolara u evre uz pomoc din
 let noviDol = 120;
 let noviDin = noviDol * kursDol;
 let noviEur = noviDin / kursEur;
 console.log(noviEur)
+
+
 // Zadatak 8
+//_________________________________________________________
 let tempCel = 38;
 let noviFar = tempCel * 1.8 + 32;
 console.log("Temperatura u Farenhajtu iznosi: " + noviFar);

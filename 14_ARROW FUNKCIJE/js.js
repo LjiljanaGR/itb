@@ -37,3 +37,5 @@ let echo = (s1, s2) => {
 
 echo("stefan", "stanimirovic");
 echo("jelena", "jelena");
+
+let m = 19;

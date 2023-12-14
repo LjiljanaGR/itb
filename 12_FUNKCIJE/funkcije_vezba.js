@@ -117,7 +117,7 @@ function jaban(jabuke, banane) {
     porcijaJabuke = (jabuke - osteceneJabuke) / 2;
   
     let porcijaBanana = 0;
-    porcijaBanana = banane / 3;
+   porcijaBanana = banane / 3;
 
     let porcija = 0; 
     
@@ -129,4 +129,24 @@ function jaban(jabuke, banane) {
 }
 
 console.log(jaban(2, 3));
+
+//////////////////////////////////////////////////////////////////////
+/* 6. Programirati funkciju za mašinu za izradu nogara za stolove u 
+jednoj fabrici drveta. 
+Prva noga stola je duža druge noge stola isto koliko druga noga 
+stola od treće noge stola, isto kao i treća noga stola od četvrte 
+noge stola. 
+
+Dužina prve noge stola i još dve noge stola su poznate, 
+a četvrta nije poznata. 
+
+Funkcija fabrika određuje i vraća dužinu izostale noge stola ako se 
+funkciji prosleđuju poznate dužine ostale tri noge stola 
+(dužina prve noge stola i dužine neke dve noge stola).
+*/
+//////////////////////////////////////////////////////////////////////
+
+function fabrika() {
+let prva noga stola = 
+}
 
