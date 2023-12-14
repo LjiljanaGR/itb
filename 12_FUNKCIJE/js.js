@@ -176,7 +176,7 @@ function maks4(a, b, c, e) {
 console.log(maks4(12, 222, 3, 4));
 
 ////////////////////////////////////////////////
-//Drugi nacin
+//DRUGI NACIN
 /////////////////////////////////////////////////
 const maks2Function = (broj1, broj2) => {
     if (broj1 > broj2) {
@@ -207,7 +207,7 @@ prikaziSliku("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRg
 prikaziSliku("1.jpg");
 
 ////////////////////////////////////////////////
-//5. Zadatak KOMPLEKSNIJI
+//5. a) KOMPLEKSNIJE resenje
 //////////////////////////////////////////////////////
 
 function prikaziSLikuUElementu(putanja, id) {
@@ -228,7 +228,10 @@ function bojaParagrafa (boja) {
 bojaParagrafa(`blue`);
 
 ////////////////////////////////////////////////
-// 7. Napisati program koji sadrži funkciju sedmiDan koja za uneti broj n u konzoli ispisuje n-ti dan u nedelji (npr. za 0 ispisuje “Nedelja”, za 1 se ispisuje „Ponedeljak“, za 2 se ispisuje „Utorak“, ... ,  a za 7 opet “Nedelja”).
+// 7. Napisati program koji sadrži funkciju sedmiDan koja za uneti 
+//broj n u konzoli ispisuje n-ti dan u nedelji 
+//(npr. za 0 ispisuje “Nedelja”, za 1 se ispisuje „Ponedeljak“, 
+//za 2 se ispisuje „Utorak“, ... ,  a za 7 opet “Nedelja”).
 //Pitanje: Kako bismo realizovali ovaj zadatak da se tražio n-ti mesec u godini?
 ///////////////////////////////////////////////////////
 
@@ -250,3 +253,206 @@ function sedmiDan(n) {
     }
 }
 sedmiDan(4);
+
+////////////////////////////////////////////////
+// 8. Napisati funkciju deljivSaTri koja se koristi u 
+//ispisivanju brojeva koji su deljivi sa tri u intervalu od n do m.
+// Prebrojati koliko ima ovakvih brojeva od n do m.
+///////////////////////////////////////////////////////
+
+function deljivSaTri(n, m) {
+    let brojac = 0;
+    for (let i = n; i <= m; i++) {
+        if(i % 3 == 0) {
+            console.log(i);
+            brojac++;
+        }
+    }
+    console.log(`U intervalu od ${n} do ${m} ima ${brojac} brojeva deljivih sa 3.`)
+}
+
+deljivSaTri(10, 30);
+
+//Ako funkcija ima return, onda mozemo da koristimo Console.log 
+//sa imenom funkcije npr. console.log(nazivfunkcije(argumenti));
+//Ukoliko nema returna u funkciji, onda funkciju pozivamo 
+//tako sto pisemo samo ime funkcije sa argumentima!!!!
+
+
+//////////////////////////////////////////////////////////
+//9. Napisati funkciju sumiraj koja određuje i vraća sumu
+//brojeva od n do m. Brojeve n i m proslediti kao parametre funkciji.
+/////////////////////////////////////////////////////////////////
+
+function sumiraj(n, m) {
+    let suma = 0;
+
+    for(let i = n; i <= m; i++ ) {
+        suma += i;
+    }
+
+    return suma;
+}
+
+console.log(sumiraj(1, 5));
+
+
+///////////////////////////////////////////////////////////////////
+//10. Napisati funkciju množi koja određuje i vraća proizvod brojeva 
+//od n do m. Brojeve n i m proslediti kao parametre funkciji.
+///////////////////////////////////////////////////////////////////
+
+function mnozi(n, m) {
+    let proizvod = 1;
+    for(let i = n; i <= m; i++) {
+        proizvod *= i;
+    }
+
+    return proizvod;
+}
+
+console.log(mnozi(2, 3));
+
+//////////////////////////////////////////////////////////////////////////
+//11. Napraviti funkciju aritmeticka koja vraća aritmetičku sredinu 
+//brojeva od n do m. Brojeve n i m proslediti kao parametre funkciji.
+/////////////////////////////////////////////////////////////////////////////////
+
+function aritmeticka(n, m) {
+    let arVrednost = 0;
+    let brojacBrojeva = 0;
+    let suma = 0;
+
+    for(let i = n; i <= m; i++) {
+        brojacBrojeva++;
+        suma += i;
+    }
+
+    arVrednost = suma / brojacBrojeva;
+
+    return arVrednost;
+}
+console.log(aritmeticka(1, 5));
+
+//////////////////////////////////////////////////////////////////////////////////
+//12. Napisati funkciju aritmetickaTri koja vraća aritmetičku
+// sredinu brojeva kojima je poslednja cifra 3 u intervalu od n do m. 
+//Brojeve n i m proslediti kao parametre funkciji.
+//////////////////////////////////////////////////////////////////////////////////////////
+
+function aritmetickaSredina(n, m) {
+    
+    let suma = 0;
+    let brojac = 0;
+   
+    for(let i = n; i <= m; i++) {
+        if(i % 10 == 3) {
+            console.log(i);
+            suma += i;      
+            brojac++;   
+        }
+    }
+   console.log(`${suma}`);
+
+   let ariVrednost = suma / brojac;
+   console.log(`${ariVrednost}`);
+   return ariVrednost;
+   
+}
+
+console.log(aritmetickaSredina(1, 13));
+
+///////////////////////////////////////////////////////////////////
+//13. Napisati funkciju velicinaFonta kojoj se prosleđuje ceo broj a 
+//ona ispisuje tekst koji ima prosleđenu veličinu fonta.
+/////////////////////////////////////////////////////////////////
+
+function velicinaFonta(n, str1) {
+    
+    let paragraf = document.getElementById(`obojeniParagraf`);
+    paragraf.style.fontSize = `${n}px`;
+    paragraf.innerHTML = `${str1}`;
+}
+
+velicinaFonta(55, 'Neka recenica');
+
+//////////////////////////////////////////////////////////////////////
+//14. Napisati funkciju recenica5 koja pet puta ispisuje istu
+//rečenicu, a veličina fonta rečenice treba da bude jednaka 
+//vrednosti iteratora.
+////////////////////////////////////////////////////////////////////////
+
+function recenica5() {
+
+    for (let i = 10; i <= 50; i++) 
+    {
+        document.write(`<p style="font-size: ${i}px">Neki Paragraf</p>`);
+    }
+}
+recenica5();
+
+/////////////////////////////////////////////////////////////////////
+//15. Dobili ste plaćenu programersku praksu u trajanju od n meseci. 
+//Prvog meseca, plata će biti a dinara, a ako budete vredno radili 
+//svakog narednog meseca ćete dobiti povišicu od d dinara. 
+//Brojeve n, a i d određujete sami.Napišite funkciju poslednjaPlata 
+//kojoj se prosleđuju brojevi n, a i d. Funkcija treba da vrati kolika
+// će vam plata biti poslednjeg meseca prakse, ukoliko svakog meseca 
+//budete dobijali povišicu.
+
+//Testirati zadatak (pozvati funkciju i ispisati vrednost koju ona vraća).
+
+//Napišite funkciju ukupnaPlata kojoj se prosleđuju brojevi n, a i d. Funkcija treba da vrati 
+//vrednost koliko ćete ukupno navca zaraditi na praksi, ukoliko svakog meseca budete 
+//dobijali povišicu.
+//Testirati zadatak (pozvati funkciju i ispisati vrednost koju ona vraća).
+
+function poslednjaPlata(n, a, d) {
+    return a + (n - 1) * d;
+  }
+  console.log(poslednjaPlata(6, 1000, 100));
+
+
+  function ukupnaPlata(n, a, d) {
+    return ((a + poslednjaPlata(n, a, d)) / 2) * n;
+  }
+  console.log(ukupnaPlata(3, 1000, 100));
+  
+function ukupnaPlata(n, a, d) {
+    let ukupnaPlata = n * a;
+    let ukupnaPovisica = n * d;
+    let ukupnoNaKraju = ukupnaPlata + ukupnaPovisica;
+    return ukupnoNaKraju
+}
+console.log(ukupnaPlata(10, 50000, 5000));
+
+/*16. Na igrama bez granica, ekipi je postavljen 
+zadatak da za što kraće vreme pređe stazu na kojoj se nalazi pokretni 
+most. Takmičaru ove ekipe od polazne tačke do mosta treba t sekundi. 
+Tačno p sekundi od kada takmičar može da krene sa polazne tačke (tj. 
+od početka merenja) most počinje da se podiže. Ukoliko takmičar  
+pre podizanja mosta kroči na most, zadržaće ga svojom težinom i 
+most se neće podići tj. takmičar će moći nesmetano da pređe most. 
+Od trenutka podizanja pa do spuštanja mosta protiče n sekundi i 
+prelaz preko mosta za to vreme nije moguć. Nakon toga most ostaje
+spušten. Takmičari za čekanje kod mosta dobijaju negativne poene,
+pa je tim rešio da napravi program koji će im tačno odrediti u 
+kojoj sekundi treba da pođu sa startne pozicije kako ne bi dobijali
+negativne poene. Pomozite timu da napravi funkciju na osnovu
+prosleđenih vrednosti t, p i n. Funkcija vraća koliko sekundi
+nakon početka merenja vremena treba da pođe, kako bi prošli 
+poligon bez zaustavljanja.
+npr: t=15, p=20, n=25, čekanje je 0s
+npr: t=15, p=10, n=12, čekanje je 7s*/
+
+function igreBezGranica (t, p, n) {
+    if (t < p || t> p + n) {
+        console.log(`Cekanje je 0s.`)
+    }
+    else {
+        let cekanje = p + n - t;
+        console.log(`Takmicar je potrebno da saceka ${cekanje}s.`)
+    }
+}
+igreBezGranica(15, 20, 25);
+igreBezGranica (15, 10, 12);
