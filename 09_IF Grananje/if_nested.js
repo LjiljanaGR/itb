@@ -61,14 +61,18 @@ Datume unosimo tako što u posebnim promenljivama navedemo dan,
  let dan2 = 7;
   if(godina1 < godina2) {
      console.log( `${godina1} je ranija od ${godina2}`);
- }else if (godina2< godina1){
+ }
+ else if (godina2< godina1){
     console.log( `${godina2} je ranija od ${godina1}`);
- }else if(godina1 == godina2) {
+ }
+ else if(godina1 == godina2) {
     if(mesec1 < mesec2) {
         console.log(`Ranije prvi datum`);
-    } else if(mesec2<mesec1) {
+    } 
+    else if(mesec2<mesec1) {
         console.log(`Raniji je drugi datum`);
-    }else if(mesec1 == mesec2) {
+    }
+    else if(mesec1 == mesec2) {
         if(dan1<dan2) {
             console.log(`Ranije je prvi dan`);
         }else if(dan2<dan1)
@@ -215,11 +219,12 @@ if (maksimum < b3) {
 //Korišćenjem if – else strukture
 //Korišćenjem ugnježdenog grananja.
 if(b1 > b2) {
-if (b1 > b3) {
-    console.log('Najveci je ' + b1);
-} else {
+    if (b1 > b3) {
+        console.log('Najveci je ' + b1);
+    } 
+    else {
     console.log('Najveci je' + b3);
-}
+    }
 }
 
 else if (b2 > b3) {
