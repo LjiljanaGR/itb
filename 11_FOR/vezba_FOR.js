@@ -133,7 +133,7 @@ while (i <= n) {
 }
 console.log(`Suma brojeva od 1 do ${n} je ${suma}`);
 
-//6. Odrediti proizvod brojeva od n do m
+//7. Odrediti proizvod brojeva od n do m
 //========================================================
 
 i = 5; 
@@ -157,7 +157,7 @@ while (i <= 13) {
 }
 console.log(`Proizvod brojeva je ${proizvod}`);
 
-//7. Odrediti sumu kvadrata brojeva od n do m *
+//8. Odrediti sumu kvadrata brojeva od n do m *
 //=================================================================
 
 let sumaKvadrata = 0;
@@ -170,23 +170,141 @@ for (i = n; i <= m; i++) {
 console.log(`Suma kvadrata brojeva od ${n} do ${m} iznosi ${sumaKvadrata}`);
 //=====================================================================
 
+/*9. Preuzeti proizoljne tri slike sa istom ekstenzijom i imenovati ih
+1, 2 i 3. For petljom u HTML-u ispisati svaku od sličica uz pomoć 
+brojača (iteratora).*/
+//================================================================================= 
 
-//8. Preuzeti proizoljne tri slike sa istom ekstenzijom i imenovati ih 1, 2 i 3. 
-//9. For petljom u HTML-u ispisati svaku od sličica uz pomoć brojača (iteratora).
-//10. Odrediti proizvod svih brojeva deljivih sa 11 u intervalu od 20 do 100. *
-//11. Prebrojati koliko ima brojeva deljivih sa 13 u intervalu od 5 do 150.
-//12. Ispisati aritmetičku sredinu brojeva od n do m.
-//13. Prebrojati koliko brojeva od n do m je pozitivno, a koliko njih je negativno. *
+n = 1;
+m = 3;
+
+for(let i = n; i <= m; i++) {
+    if(i == 1) {
+        document.write(`<img src="1.jpg">`);
+    }
+    else if (i ==2) {
+        document.write(`<img src="2.jpg">`);
+    }
+    else {
+        document.write(`<img src="3.jpg">`);
+    }
+}
+
+//Drugi nacin
+//=======================================================================
+for(let i = n; i <= m; i++) {
+    document.write(`<img src="${i}.jpg">`);
+}
+
+/* 10. Odrediti proizvod svih brojeva deljivih sa 11 u intervalu od 
+20 do 100.*/
+//=======================================================================
+
+let broj11 = 11;
+let proizvod11 = 1;
+
+n = 20;
+m = 100;
+
+for(let i = n; i <=100; i++) {
+    if(i % 11 == 0) {
+        proizvod11 *= i;
+    }
+}
+console.log(`${proizvod}`);
+  
+/*11. Prebrojati koliko ima brojeva deljivih sa 13 u intervalu od 5 do 150.*/
+//=======================================================================
+
+n = 5; 
+m = 150;
+
+for(let i = n; i <= m; i++) {
+    if(i % 13 == 0) {
+        console.log(i);
+    }
+}
+console.log(`Brojeva deljivih sa 13 ima ${i}`);
+
+/*12. Ispisati aritmetičku sredinu brojeva od n do m.*/
+//====================================================================
+
+let sredina = 0; 
+let sumaBr = 0;
+n = 1; 
+m = 3;
+
+for(let i = n; i <= m; i++) {
+    sumaBr += i;
+    sredina = sumaBr / i;
+}
+console.log(`Suma brojeva je ${sumaBr}`)
+console.log(`Aritmeticka sredina brojeva je ${sredina}`)
+
+/*13. Prebrojati koliko brojeva od n do m je pozitivno, a 
+koliko njih je negativno. */
+//==================================================================
+
+n = 1;
+m = 20;
+let pozitivno = 0;
+let negativno = 0;
+
+for(let i = n; i <=m; i++) {
+    if(i % 2 == 0) {
+        pozitivno++;
+        
+    }
+    else {
+        negativno++;
+    }
+}
+
+console.log(`${pozitivno} je pozitivno, a ${negativno} negativno`)
+
 //14. Prebrojati koliko je brojeva od 5 do 50 koji su deljivi sa 3 ili sa 5. *
-//15.Prebrojati i izračunati sumu brojeva od n do m kojima je poslednja cifra 4.
+//========================================================================
+
+let deljivi = 0;
+n = 5; 
+m = 50;
+
+for(let i = n; i <=m; i++) {
+    if(i % 5 == 0 || i % 5 ==0) {
+        deljivi++;
+    }
+}
+console.log(`ima ${deljivi} brojeva`);
+
+/*15.Prebrojati i izračunati sumu brojeva od n do m kojima je poslednja 
+cifra 4.*/
+//====================================================================
+let sumabr = 0;
+let brBrojeva = 0;
+n = 1; 
+m = 14;
+
+for(let i = n; i <=m; i++) {
+    if(i % 10 === 4) {
+        brBrojeva++;
+     sumabr += i;
+    }
+}
+
+console.log(`${sumabr} je suma brojeva koji se zavraavju na 4, a i brojevi su ${brBrojeva}`);
+
 //16.Odrediti sumu brojeva od n do m koji nisu deljivi brojem a
+
 //17. Odrediti proizvod brojeva od n do m koji su deljivi brojem a *
+
 //18. Odrediti sa koliko brojeva je deljiv uneti broj k
-//19. Odrediti da li je dati prirodan broj n prost. Broj je prost ako je deljiv samo sa jedan i sa samim sobom.
-//20. Napraviti tabelu sa 6 redova.
-//21. Svaki red tabele treba da ima po dve ćelije (dve kolone).
-//22. Svakom parnom redu dodati klasu „obojen“.
-//23. Korišćenjem CSS-a, klasi obojen postaviti proizvoljnu boju pozadine. 
+
+/*19. Odrediti da li je dati prirodan broj n prost. Broj je prost ako je deljiv 
+samo sa jedan i sa samim sobom.*/
+
+/*20. Napraviti tabelu sa 6 redova.Svaki red tabele treba da ima po dve ćelije (dve kolone).
+Svakom parnom redu dodati klasu „obojen“.Korišćenjem CSS-a, klasi obojen 
+postaviti proizvoljnu boju pozadine. */
 
 
 
