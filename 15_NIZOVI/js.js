@@ -335,4 +335,73 @@ let brojevi5 = [8, 6, 7, 8, 5];
 */
 
 
+/////////////////////////////////////////////////
+/*19.Ispisati dužinu svakog elementa u nizu stringova. */
+/////////////////////////////////////////////////////////
+let imena = ["stefan" , "Jelena" , "Marko" , "Milos", "Bratislav", "Ljiljana"];
+
+
+let duzinasvakogElementa =  niz => {
+    for(let i =0; i < niz.length; i++) {
+        let s = niz[i];
+        console.log(s.length);
+    }
+}
+
+duzinasvakogElementa(imena);
+
+/////////////////////////////////////////////////
+/*20.Odrediti element u nizu stringova sa najvećom dužinom. */
+/////////////////////////////////////////////////////////
+
+let najduziString = niz => {
+    let max = niz[0].length;
+    let s = niz[0];
+
+    for(let i = 0; i < niz.length; i++) {
+        let maxi = niz[i].length;
+
+        if(maxi > max) {
+            s = niz[i];
+            max = maxi;
+        }
+    }
+
+return s;
+}
+console.log(najduziString(imena));
+
+/////////////////////////////////////////////////
+/*21.Odrediti broj elemenata u nizu stringova čija je dužina 
+veća od prosečne dužine svih stringova u nizu. */
+/////////////////////////////////////////////////////////
+
+let prosecnaDuzina = niz => {
+    let zbirDuzina = 0; 
+    for(let i = 0; i < niz.length; i++) {
+        let s = niz[i];
+        zbirDuzina +=s.length; 
+    }
+    return zbirDuzina / niz.length;
+}
+let brojNatprosecnoDugih = niz => {
+    let pd = prosecnaDuzina(niz);
+    let broj = 0;
+
+    for(let i =0; i <niz.length; i++) {
+        let s = niz[i];
+        if (s.length > pd) {
+            broj++;
+        }
+    }
+    return broj;
+}
+
+console.log(prosecnaDuzina(imena));
+console.log(brojNatprosecnoDugih(imena));
+
+/////////////////////////////////////////////////
+/*22.Odrediti broj elemenata u nizu stringova koji sadrže slovo
+ 'a’. */
+/////////////////////////////////////////////////////////
 

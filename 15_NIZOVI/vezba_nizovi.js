@@ -264,6 +264,7 @@ let menjanjeZnaka = niz => {
     }
     return niz;
 }
+
 //////////////////////////////////////////////////////////////
 /* 15. Promeniti znak svakom neparnom elementu celobrojnog 
 niza sa parnim indeksom.*/
@@ -277,4 +278,34 @@ let promenitiZnak2 = niz => {
     }
     return niz;
 }
-console.log(promenitiZnak2(brojevi1));
+console.log(promenitiZnak2(brojevi2));
+
+//////////////////////////////////////////////////////////////
+/* 19. Ispisati dužinu svakog elementa u nizu stringova*/
+//////////////////////////////////////////////////////////////
+
+let string = ["Prvi" , "Drugi", "Treci"];
+
+ console.log(string.length);
+ console.log(string[0].length);
+ console.log(string[1].length);
+
+
+ let duzinaStringa = niz => {
+    let rezultatNiza = [];
+
+    for (let i = 0; i < niz.length; i++) {
+        rezultatNiza[i] = niz[i].length;
+    }
+
+    return rezultatNiza;
+}
+
+console.log(duzinaStringa(string));
+
+//////////////////////////////////////////////////////////////
+/* 20. Odrediti element u nizu stringova sa najvećom dužinom.*/
+//////////////////////////////////////////////////////////////
+
+
+
