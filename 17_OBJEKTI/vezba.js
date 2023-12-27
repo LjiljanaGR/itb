@@ -205,7 +205,9 @@ let student = {
         let prosekPrvi = 0;
         let drugaPolovina = this.ocene - prvaPolovina;
 
-        for(let i =0; i < this.ocene.length; i++) {}
+        for(let i =0; i < this.ocene.length; i++) {
+            sumaPrva += prvaPolovina
+        }
             
         
 },
