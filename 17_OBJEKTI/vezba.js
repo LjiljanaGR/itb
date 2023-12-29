@@ -198,19 +198,37 @@ let student = {
     ima neparan broj ocena, računajte da je manje ocena u prvoj polovini 
     niza.*/
 
+   
     napreduje: function() {
 
         let prvaPolovina = this.ocene.slice(0, this.ocene.length/2);
-        let sumaPrva = 0;
-        let prosekPrvi = 0;
-        let drugaPolovina = this.ocene - prvaPolovina;
+        let suma = 0;
+        let prosek = 0;
+        let index = 0;    
+    },
 
-        for(let i =0; i < this.ocene.length; i++) {
-            sumaPrva += prvaPolovina
-        }
-            
+    //i) metoda
+    /*Napisati metodu koja vraća najveću razliku između neke dve uzastopne ocene.*/
+     //ocene: [6, 10, 7, 10, 10, 6, 10, 10, 10, 10],
+    najvecaRazlika: function() {
         
-},
+        let maxRazlika = this.ocene[1] - this.ocene[0];
+
+        for(let i = 0; i < this.ocene.length; i++) {
+            for(let j = i + 1; j < this.ocene.length; j++) {
+                if(this.ocene[j] - this.ocene[i] > maxRazlika)
+                maxRazlika = this.ocene[j] - this.ocene[i];
+            }
+        }
+        return maxRazlika;
+    }
+
+    //k) metoda
+    /*Napisati metodu koja vraća najveću razliku između neke dve uzastopne ocene.*/
+     //ocene: [6, 10, 7, 10, 10, 6, 10, 10, 10, 10],
+    
+     
+
 }
 
 
@@ -222,4 +240,5 @@ console.log(`Student je aljkav? ${student.aljkav()}`);
 console.log(`Student se bruka? ${student.bruka()}`);
 console.log(`Student je kolekcionar? ${student.kolekcionar()}`);
 console.log(`Student je savrsen? ${student.savrsen()}`);
-console.log(`Student napreduje? ${student.napreduje()}`)
+console.log(`Student napreduje? ${student.napreduje()}`);
+console.log(`Najveca razlika je? ${student.najvecaRazlika()}`)

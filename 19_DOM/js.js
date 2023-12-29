@@ -1,18 +1,31 @@
 console.log(document); // document je objekat 
 console.log(document.body); //body svojstvo document objekta je objekat
 
+
+//DODAVANJE ELEMENTA BY TAG NAME
+//======================================================================
+// jedinstven objekat iz DOM stabla (koji ima ovaj ID)
+
 let el1 = document.getElementById("p2");
-console.log(el1);// jedinstven objekat iz DOM stabla (koji ima ovaj ID)
+console.log(el1);
+
+//DPDAVANJE ELEMENTA BY CLASSNAME
+//=======================================================================
+//HTML kolekcija objekata iz DOM stabla
 
 let el2 = document.getElementsByClassName("par");
-console.log(el2); //HTML kolekcija objekata iz DOM stabla
+console.log(el2); 
 
-//Pristup elementima HTML kolekcija
+//Pristup elementima HTML kolekcija samo FOR PETLJOM
+//_____________________________________________________________________
+
 for(let i = 0; i < el2.length; i++) {
     console.log(el2[i]);
 }
 
-//Ne poseduju forEach petlju 
+//NIJE MOGUCE FOREACH PETLJOM 
+//=========================================================================
+
 //el2.forEach(element => {
 //    console.log(element);
 //});
@@ -22,6 +35,7 @@ niz.forEach(el => {
     console.log(el);
 });
 
+//
 let el3 = document.getElementsByTagName("p");//Vraca HTML kolekciju
 console.log(el3);
 
@@ -100,6 +114,7 @@ lin.forEach(link => {
     link.style.color = "red";
     link.style.fontSize = "20px";
     link.style.textDecoration = "none";
+    
 });
 
 //ZADACI
@@ -107,12 +122,11 @@ lin.forEach(link => {
 
 //7. 
 //Selektovati sve paragrafe i u svakom od njih pridodati tekst VAZNO!
+
 let sviparagrafi = document.querySelectorAll("p");
 
 sviparagrafi.forEach( par => {
-
     par.innerHTML += `VAZNO!!!`;
-
 
 }); 
 
@@ -120,10 +134,9 @@ sviparagrafi.forEach( par => {
 /*Svim divovima na stranici sa klasom "error", dodati po jedan naslov najvece velicine 
 sa tekstom GRESKA */
 
-// let divE = document.getElementsByClassName("error"); //HTMCOLECTION i ne moze preko foreach petlje
-let divE = document.querySelectorAll(".error"); //Nodlista i moze preko forEach petlje
-//console.log(divE); 
 
+let divE = document.querySelectorAll("div.error"); //Nodlista i moze preko forEach petlje
+ 
 divE.forEach(div => {
 
   div.innerHTML += `<h1>GRESKA!</h1>`;
@@ -132,9 +145,15 @@ divE.forEach(div => {
 });
 
 // 9. 
-/* Neka je n broj paragrafa u datm dokumentu. U svakom i-tom paragrafu dodati broj i na kvadrat, 
-za svako i = 1, 2, ...n. */
+/* Neka je n broj paragrafa u datm dokumentu. U svakom i-tom paragrafu dodati broj i 
+na kvadrat, za svako i = 1, 2, ...n. */
 
+let paragrafN = document.querySelectorAll('p');
+    
+    paragrafN.forEach((e, index) => {
+        let kv = (index + 1 ) * (index + 1)
+        e.innerHTML += `${index+1}<sup>2</sup> = ${kv}`
+});
 
 //10.
 /*Svim slikama dodati alternativni tekst*/
@@ -142,9 +161,8 @@ za svako i = 1, 2, ...n. */
 let sveSlike = document.querySelectorAll("img");
 
 sveSlike.forEach( sl => {
-    
-    sl.setAttribute("alt" , "TEKST")
-
+   //sl.setAttribute("alt" , "TEKST")
+   sl.alt = "Neki TEKST"
 });
 
 //11. 
@@ -153,43 +171,48 @@ sveSlike.forEach( sl => {
 let ljubicasti = document.querySelectorAll("p");
 
 ljubicasti.forEach(p => {
-
     p.style.color = "purple";
-
 });
 
-//12.
-/*Svim parnim paragrafima na stranici postaviti pozadinsku zelenu boju, 
-a svim neparnim paragrafima postaviti pozadinu  crvene boje*/
+//12. Poslednji zadatak sa slajda 8
+/*
+for (let i = 0; i < sviParagrafi.length; i++) {
+  if (i % 2 === 1) {
+    sviParagrafi[i].style.backgroundColor = "green";
+  } else {
+    sviParagrafi[i].style.backgroundColor = "red";
+  }
+};
+*/
+//13. 
+/*Svim linkovima na stranici postaviti padding na 5px,
+font size na 18px i text-decoration na none.
+Parnim linkovima staviti zelenu pozadinsku boju i 
+ljubicastu boju teksta, a neparnim linkovima plavu 
+pozadinsku boju i belu boju teksta. */
 
-let crvenaZelena = document.querySelectorAll("p");
+let sviLinkovi = document.querySelectorAll('a');
 
-crvenaZelena.forEach((p, index) => {
+sviLinkovi.forEach((e, index) => {
+e.style.padding = "50px";
+e.style.fontSize = "18px";
+e.style.textDecoration = "none";
 
-    if(index % 2 == 0 ) {
-        p.style.backgroundColor = "green"; 
+    if(index % 2 == 0) {
+        e.style.backgroundColor = "green";
+        e.style.color = "purple";
     }
     else {
-        p.style.backgroundColor = "red"; 
+        e.style.backgroundColor = "blue";
+        e.style.color = "white";
     }
-    
 });
 
-//13 
-/* */
+console.log(sviLinkovi);
 
+//13
+/* Svim slikama na stranici koja su sa 
+ekstenzijom .png, postaviti okvir na debljinu 2px i crvenu boju.*/
 
-
-
-
-
-
-/* Svim linkovima na stranici postaviti padding na 5px, font size na 18px i text-decoration na none.
-Parnim linkovima staviti zelenu pozadinsku boju i ljubicastu boju teksta, a neparnim linkovima plavu pozadinsku boju i belu boju teksta.
-Svim slikama na stranici koja su sa ekstenzijom .png, postaviti okvir na debljinu 2px i crvenu boju. 
-Svakom linku na stranici promeniti target svojstvo na sledeći način: ako je bilo _blank, postaviti na _top, a ako je bila neka vrednost različita od _blank, ili uopšte nije bilo postavljeno, tada postaviti na _blank. 
-Napraviti niz od najmanje tri imena. Proći nizom i imena ispisati:
-Svako u novom linku. Ako ime počinje na slovo „S“, link se otvara u novom tabu, a inače se otvara na istoj stranici.
-U listi kao stavke liste. Naizmenično stavke liste obojiti sa dve različite boje.
-U jednoj koloni tabele. Postaviti okvir, marginu i pading ćelijama tabele.
-*/
+let diV = el1.parentNode;
+console.log(div);
