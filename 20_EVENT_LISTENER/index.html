@@ -15,10 +15,32 @@
     <button id="plus">+</button>
 
     <div>
-        <input type="text" id="inputTekst">
-        <button id="dugme">Ispisi</button>
-        <p id="paragraf"></p>
+        <input type="text" id="tekst">
+        <button id="ispisiTekst">Ispisi</button>
+        <p id="ispisTeksta"></p>
+            Pol:
+        <input type="radio" name="pol" value="muskog" id="muski">Muski
+        <input type="radio" name="pol" value="zenskog" id="zenski">Zenski
+        <input type="radio" name="pol" value="neopedeljenog" id="neopredeljen" checked>Neopredeljen
     </div>
+
+    <div>
+        Kvadriraj ovaj broj:<input type="text" id="brojevi">
+        <button id="izracunaj">Izracunaj</button>
+        <p id="paragraf">Rezultat je: </p>
+    </div>
+    <div>
+        Prepolovi ovaj broj: <input type="text" id="prepolovljenBr">
+        <button id="izracunajDrugi">Izracunaj</button>
+        <p id="paragrafDrugi">Rezultat je:</p>
+    </div>
+    <div>
+        Izracunati povrsinu kruga za zadati poluprecnik: <input type="text" id="inputZaKrug">
+        <button id="izracunajPovrsinu">Izracunaj</button>
+        <p id="paragrafKrug">Rezultat je:</p>
+    </div>
+
+
 
     <script src="js.js"></script>
 </body>
