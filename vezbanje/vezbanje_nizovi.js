@@ -288,7 +288,8 @@ console.log(komplikacija(brojevi2));
 
 //////////////////////////////////////////////////////////////////////////
 /* 16.Dat je niz stavki za kupovinu (članovi niza su stringovi). 
-Prolaskom kroz niz napraviti neuređenu listu i ispisati je u html dokument.*/
+Prolaskom kroz niz napraviti neuređenu listu i ispisati je u 
+                    H T M L  D O K U M E N T U.*/
 //=========================================================================
 
 //===========================================================================
@@ -377,7 +378,7 @@ let spisakKupovina5 = (array) => {
 spisakKupovina5(kupovina);
 
 //===========================================================================
-/* P E T I  N  A  C  I  N */
+/* S E S T I  N  A  C  I  N */
 //==========================================================================
 
 let spisakZakupovinu6 = (array) => {
@@ -399,32 +400,243 @@ spisakZakupovinu6(kupovina);
 
 //////////////////////////////////////////////////////////////////////////
 /* 17.Dat je niz imena košarkaškog tima. Prolaskom kroz niz 
-formirati tabelu u čijim su redovima imena tima, i tabelu ispisati u html dokument..*/
+formirati tabelu u čijim su redovima imena tima, i tabelu ispisati u 
+                    H T M L  D O K U M E N T U.*/
 //=========================================================================
 
+//===========================================================================
+/* P R V I   N  A  C  I  N */
+//==========================================================================
 
+let timovi = ["prvi" , "drugi" , "treci"];
 
+let funkcija1 = (array) => {
+    for (let index = 0; index < array.length; index++) {
+        //const element = array[index];
+        document.write (`<table><tr><td style="border: 2px solid red">${index}${array[index]}</td></tr></table>`);
+    }
+}
+funkcija1(timovi);
+//console.log(funkcija1(timovi));
+
+//===========================================================================
+/* D R U G I   N  A  C  I  N */
+//==========================================================================
+
+let funkcija2 = (array) => {
+
+    array.forEach((element, index) => {
+        document.write(`<table><tr><td>${index+1} ${element}</td></tr></table>`)
+    });
+}
+funkcija2(timovi);
+
+//===========================================================================
+/* T R E C I   N  A  C  I  N */
+//==========================================================================
+
+let funkcija3 = (array) => {
+    let tabelaNeka = document.getElementById('tabela');
+    let tabela = `<table>`;
+
+    for (let index = 0; index < array.length; index++) {
+        //const element = array[index];
+        tabela += `<tr><td style="border: 2px solid green">${array[index]}</td></tr>`
+    }
+    tabela += `</table>`;
+    tabelaNeka.innerHTML = tabela;
+}
+funkcija3(timovi);
+
+//===========================================================================
+/* C E T V R T I   N  A  C  I  N */
+//==========================================================================
+
+let funkcija4 = (array) => {
+    let div = document.getElementById('tabela1');
+    let tabela = `<table>`
+
+    array.forEach(element => {
+        tabela += `<tr><td>${element}</tr></tr>`
+    });
+
+    tabela += `</table>`;
+    div.innerHTML = tabela;
+}
+funkcija4(timovi)
+
+//===========================================================================
+/* P E T I  N  A  C  I  N */
+//==========================================================================
+
+let funkcija5 = (array) => {
+    let tabela = document.createElement('table');
+
+    for (let index = 0; index < array.length; index++) {
+        //const element = array[index];
+        let tr = document.createElement('tr');
+        let td = document.createElement('td');
+
+        td.textContent = `${array[index]}`;
+        td.style.border = `2px solid pink`;
+
+        tr.appendChild(td);
+        tabela.appendChild(tr);
+    }
+    document.body.appendChild(tabela);
+}
+funkcija5(timovi)
+
+//===========================================================================
+/* S E S T I  N  A  C  I  N */
+//==========================================================================
+
+let funkcija6 = (array) => {
+    let novaTabela = document.createElement('table');
+
+    array.forEach(element => {
+        let tr = document.createElement('tr');
+        let td = document.createElement('td');
+
+        td.textContent = `${element}`;
+        td.style.border = `2px solid blue`;
+
+        tr.appendChild(td);
+        novaTabela.appendChild(tr)
+    });
+    document.body.appendChild(novaTabela)
+}
+
+funkcija6(timovi)
 
 //////////////////////////////////////////////////////////////////////////
 /* 18.Dat je niz stringova čiji su članovi putanje do slika. 
 Prikazati sve sliku u html dokumentu sa putanjama navedenim u nizu..*/
 //=========================================================================
 
+//===========================================================================
+/* P R V I   N  A  C  I  N */
+//==========================================================================
+
+
+let slike = ["1.jpg" , "2.jpg" , "3.jpg"];
+
+let nekaFUnkcija = (array) => {
+    array.forEach(element => {
+        document.write(`<img src="${element}" style="width: 100px">`)
+    });
+}
+nekaFUnkcija(slike)
+
+//===========================================================================
+/* D R U G I   N  A  C  I  N */
+//==========================================================================
+
+let slikeFunkcija = (array) => {
+    let novaTabela = document.createElement('table');
+
+    array.forEach(element => {
+        let tr = document.createElement('tr');
+        let td = document.createElement('td');
+        let img = document.createElement('img');
+
+        img.src = `${element}`;
+        img.style.width = `100px`;
+        td.style = `2px solid blue`;
+
+        td.appendChild(img);
+        tr.appendChild(td);
+        novaTabela.appendChild(tr)
+    });
+    document.body.appendChild(novaTabela)
+}
+
+slikeFunkcija(slike);
+
+
 //////////////////////////////////////////////////////////////////////////
 /* 19.Ispisati dužinu svakog elementa u nizu stringova. */
 //=========================================================================
+let nizStringova = ["nika" , "Aleksandra" , "Borislavkajejoje" , "magdalena"];
 
+let duzinaStringova = (array) => {
+    
+    for (let index = 0; index < array.length; index++) {
+        //const element = array[index];
+        let niz = array[index];
+        console.log(niz.length);
+    }
+    
+}
+
+duzinaStringova(nizStringova)
 
 //////////////////////////////////////////////////////////////////////////
 /* 20.Odrediti element u nizu stringova sa najvećom dužinom.*/
 //=========================================================================
+
+let najvecaDuzian = (array) => {
+    let najduzi = array[0].length;
+    let najNaj; 
+
+    for (let index = 0; index < array.length; index++) {
+        //const element = array[index];
+        if(array[index].length > najduzi) {
+            najduzi = array[index].length;
+            najNaj = najduzi;
+
+        }
+    }
+    return najNaj;
+}
+console.log(najvecaDuzian(nizStringova));
+
 //////////////////////////////////////////////////////////////////////////
 /* 21.Odrediti broj elemenata u nizu stringova čija je dužina 
 veća od prosečne dužine svih stringova u nizu.*/
 //=========================================================================
+nizStringova = ["nika", "Borislavkajejoje", "aaaaaaaaaaa" , "ggggg" , "ddddddddddddd"];
+
+let brojElemenata = (array) => {
+    let prosecna = 0; 
+    let ukupnaDuzina = 0;
+    let indeX = 0;
+    let brElemenata = 0;
+    
+    array.forEach((element, index) => {
+        ukupnaDuzina += element.length;
+        indeX = index + 1;
+    });
+
+    prosecna = ukupnaDuzina / indeX;
+    //return prosecna;
+    array.forEach(element => {
+        if(element.length > prosecna)  {
+            brElemenata++;
+        }
+    });
+    return brElemenata;
+    
+}
+console.log(brojElemenata(nizStringova));
 //////////////////////////////////////////////////////////////////////////
 /* 22.Odrediti broj elemenata u nizu stringova koji sadrže slovo 'a’. */
 //=========================================================================
+
+let slovoa = (array) => {
+    let broj = 0;
+
+    array.forEach(element => {
+        if(element.includes('a')) {
+            broj++;
+        }
+    });
+    return broj;
+}
+
+console.log(slovoa(nizStringova));
+
 //////////////////////////////////////////////////////////////////////////
 /* 23.Odrediti broj elemenata u nizu stringova koji počinju na slovo 'a' ili 'A’. */
 //=========================================================================
+
