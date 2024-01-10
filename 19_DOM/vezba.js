@@ -87,7 +87,7 @@ lista.replaceChild(li4, li3);
 let li5 = document.createElement('li');
 lista.appendChild(li5);
 let slika = document.createElement('img');
-alika.src="slika.jpg";
+slika.src="slika.jpg";
 slika.alt = "neka slika"
 li5.appendChild(slike);
 

@@ -78,6 +78,7 @@ let sumaElem = niz => {
     }
     return suma;
 }
+
 console.log(sumaElem(brojevi1));
 console.log(sumaElem(brojevi2));
 console.log(sumaElem(brojevi3));
