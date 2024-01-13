@@ -1,7 +1,7 @@
-import { generateImg} from "./general.js";
+import { generateImage } from "./general.js";
 
 let generateList = parent => {
-    let ul = document.createElement('ul');
+    let ul = document.createElement("ul");
     ul.style.listStyle = "none";
     parent.append(ul);
     return ul;
@@ -10,9 +10,9 @@ let generateList = parent => {
 let generateListItem = (parent, src) => {
     let li = document.createElement("li");
     parent.append(li);
-    let img = generateImg(src);
+    let img = generateImage(src);
     li.append(img);
     return li;
 }
 
-export {generateList, generateListItem};
+export { generateList, generateListItem };
