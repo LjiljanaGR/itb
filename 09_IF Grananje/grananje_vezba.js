@@ -302,11 +302,9 @@ let mesec2 = 2;
 let godina2 = 2024;
 
 if (godina1 == godina2) {
-
     if (mesec1 > mesec2) {
         console.log(`Drugi je raniji`);
     }
-
     else if (mesec2 == mesec1) {
         if(dan1 > dan2) {
             console.log(`Drugi je raniji`);
@@ -315,11 +313,11 @@ if (godina1 == godina2) {
             console.log(`Prvi je raniji`);
         }
     }
-
     else {
         console.log(`Prvi je raniji`);
     }
 }
+
 
 else if(godina1 > godina2) {
     console.log(`Drugi datum je raniji`);

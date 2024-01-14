@@ -59,6 +59,7 @@ let pacijentSaA = niz => {
     });
     return pacijentiA;
 }
+
 pacijentSaA(pacijenti).forEach(p => {
     p.stampaj();
 });

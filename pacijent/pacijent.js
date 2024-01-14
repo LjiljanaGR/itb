@@ -30,7 +30,7 @@ class Pacijent {
             this._tezina = t;
         }
         else {
-            this.tezina = 50;
+            this._tezina = 50;
         }
     }
 
