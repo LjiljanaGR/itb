@@ -101,3 +101,30 @@ let srednjaTalasnaDuzina = niz => {
     return srednja = ukupno / brDuzina; 
 } 
 console.log(srednjaTalasnaDuzina(boje));
+
+//testiranje setera
+
+console.log("Talasna duzina boje 1 je", boja1.talasnaDuzina);
+boja1.talasnaDuzina = 400;
+console.log("Nova talasna duzina boje 1 je", boja1.talasnaDuzina);
+
+console.log("Zasicenje boje br. 1 je:", boja1.zasicenje);
+boja1.zasicenje = 1;
+console.log("Novo zasicenje boje broj1. je:", boja1.zasicenje);
+
+
+//testiranje metoda
+boja1.stampaj();
+
+
+
+
+
+
+
+
+
+
+
+
+
