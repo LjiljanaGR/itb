@@ -11,7 +11,6 @@ window.setTimeout(() => {
 console.log(3);
 console.log(4);
 
-
 const btn1 = document.getElementById('btn1');
 const div = document.getElementById('ispis');
 const btn2 = document.getElementById('btn2');
@@ -32,9 +31,7 @@ btn1.addEventListener("click", function (e) {
             div.innerHTML += `${h}:${m}:${s}`;
             timer = null;
         }, 2000);
-
     } 
-    
    
 });
 
@@ -43,3 +40,9 @@ btn2.addEventListener("Click", function(e) {
     clearTimeout(timer);
     timer = null;
 });
+
+
+
+
+
+
