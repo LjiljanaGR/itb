@@ -1,4 +1,4 @@
-/*let movie1 = {
+let movie1 = {
     name: "The Matrix",
     director: {
         name: "Lilly",
@@ -83,4 +83,30 @@ db.collection('customers')
 .catch((e) => {
     console.log(`Greska: ${e}`);
 });
+
+/*
+db.collection('customers')
+.orderBy('name')
+.get()
+.then(snapshot => {
+    snapshot.forEach(doc => {
+        let data = doc.data();
+    });
+})
+.catch(err => {
+    console.log(`Err: ${err}`);
+});
+
 */
+db.collection('users')
+.orderBy('name', 'desc')
+.orderBy('age', 'asc')
+.get()
+.then(snapshot => {
+    snapshot.forEach(doc => {
+        let data = doc.data();
+    });
+})
+.catch(err => {
+    console.log(`Err: ${err}`);
+});
